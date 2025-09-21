@@ -4,10 +4,10 @@ import "aos/dist/aos.css"; // Import AOS styles
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import directorImage from "../images/somnathdas.png"; 
-// import slide1 from "../images/hs1.jpg"; 
+// import slide1 from "../images/hs1.jpg";
 import slide2 from "../images/hs2.jpg";
 import slide3 from "../images/hs3.jpg";
-import slide1 from "../images/mock_test_series_2026.png";
+import slide4 from "../images/mock_test_series_2026.jpg";
 const Home = () => {
   useEffect(() => {
     AOS.init({
@@ -22,14 +22,17 @@ const Home = () => {
       {/* Section 1: Full-Width Slideshow */}
       <section className="w-full h-full" data-aos="fade-up">
         <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
-          <div>
+          {/* <div>
             <img src={slide1} alt="Slide 1" className="w-full h-full object-cover" />
-          </div>
+          </div> */}
           <div>
             <img src={slide2} alt="Slide 2" className="w-full h-full object-cover" />
           </div>
           <div>
             <img src={slide3} alt="Slide 3" className="w-full h-full object-cover" />
+          </div>
+          <div>
+            <img src={slide4} alt="Slide 4" className="w-full h-full object-cover" />
           </div>
         </Carousel>
       </section>

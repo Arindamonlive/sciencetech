@@ -83,6 +83,7 @@ const NavPage = () => {
 </div>
 
           <Link to="/member" className="hover:text-blue-600 py-2" onClick={() => setMenuOpen(false)}>MEMBERSHIP</Link>
+          <Link to="/examlogin" className="hover:text-blue-600 py-2" onClick={() => setMenuOpen(false)}>MOCK EXAM</Link>
           <Link to="/contact" className="hover:text-blue-600 py-2" onClick={() => setMenuOpen(false)}>CONTACT US</Link>
           {/* <Link to="/admin" className="hover:text-blue-600 py-2" onClick={() => setMenuOpen(false)}>ADMIN CORNER</Link> */}
         </nav>
@@ -112,6 +113,7 @@ const NavPage = () => {
             </div>
           </div>
           <Link to="/member" className="hover:text-blue-600">MEMBERSHIP</Link>
+          <Link to="/examlogin" className="hover:text-blue-600">MOCK EXAM</Link>
           <Link to="/contact" className="hover:text-blue-600">CONTACT US</Link>
           {/* <Link to="/admin" className="hover:text-blue-600">ADMIN CORNER</Link> */}
         </nav>
