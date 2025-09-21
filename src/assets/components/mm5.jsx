@@ -22,7 +22,7 @@ export default function MM5() {
 
 // Timer + qp control 
 
-const [timeLeft, setTimeLeft] = useState(3600); // 1 hour = 3600s
+const [timeLeft, setTimeLeft] = useState(1800); // 1 hour = 3600s
 // Timer countdown
 useEffect(() => {
   if (submitted) return; // stop timer when submitted

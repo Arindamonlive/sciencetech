@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import model2k23 from "../images/model2K23.jpg";
-import model2k24 from "../images/model2K24.jpg";
-import prize2k24 from "../images/prize2K23_1.jpg";
-import prize2k24_2 from "../images/prize2K24_2.jpg";
+import model2k23 from "../images/model2k23.jpg";
+import model2k24 from "../images/model2k24.jpg";
+import prize2k24 from "../images/prize2k23_1.jpg";
+import prize2k24_2 from "../images/prize2k24_2.jpg";
 import { X } from "lucide-react"; // Close Icon
 
 const images = [
