@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import model2k23 from "../images/model2K23.jpg";
-import quiz2k23 from "../images/quiz2k23.jpg";
-import prize2k23 from "../images/prize2k23.jpg";
+import quiz2k23 from "../images/quiz2K23.jpg";
+import prize2k23 from "../images/prize2K23.jpg";
 import { X } from "lucide-react"; // Close Icon
 
 const images = [
