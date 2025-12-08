@@ -42,9 +42,9 @@ export default function SubjectSelection() {
 
   // Example module list per subject
   const modules = {
-    Physics: ["Units, Dimensions & Errors", "Kinematics", "Laws of Motion","Work, Power & Energy","Rotational Motion"],
-    Chemistry: ["Basic Concepts & Atomic Structure", "Periodic Table & Chemical Bonding", "States of Matter & Thermodynamics","Equilibrium & Redox","Chemical Kinetics & Surface Chemistry"],
-    Mathematics: ["Sets, Relations, Functions", "Quadratic Equations & Complex Numbers", "Sequence & Series, Binomial Theorem","Permutations, Combinations & Probability","Trigonometry & Inverse Trigonometry"],
+    Physics: ["Units, Dimensions & Errors", "Kinematics", "Laws of Motion","Work, Power & Energy","Rotational Motion","Gravitation & Properties of Bulk Matter","Oscillations & Waves","Thermodynamics","Electrostatics","Current Electricity","Magnetic Effects of Current","Electromagnetic Induction & Alternating Current"],
+    Chemistry: ["Basic Concepts & Atomic Structure", "Periodic Table & Chemical Bonding", "States of Matter & Thermodynamics","Equilibrium & Redox","Chemical Kinetics & Surface Chemistry","S & P Block Elements","d & f Block Elements + Coordination Compounds","Basics  of Organic Chemistry","Hydrocarbons & Alkyl Halides","hols, Ethers & Carbonyl Compounds","Carboxylic Acids & Amines","Biomolecules & Polymers"],
+    Mathematics: ["Sets, Relations, Functions", "Quadratic Equations & Complex Numbers", "Sequence & Series, Binomial Theorem","Permutations, Combinations & Probability","Trigonometry & Inverse Trigonometry","Straight Lines & Circles","Conic Sections","Limits, Continuity & Differentiability","Applications of Derivatives","Integrals & Differential Equations","Vectors & 3D Geometry","Matrices & Determinants"],
   };
 // ✅ Utility to make the route
 const getModulePath = (subject, module) => {
