@@ -4,6 +4,10 @@ import "aos/dist/aos.css";
 import model2k24 from "../images/model2K24.jpg";
 import prize2k24_2 from "../images/prize2K24_2.jpg";
 import quiz2k24 from "../images/quiz2K24.jpg";
+import quiz2k24result from '../images/VSF_WINNERS_2024.jpg'
+import Judge1 from '../images/2024_image1.jpeg'
+import Judge2 from '../images/2024_image2.jpeg'
+import SocialMedia from '../images/2024_image3.jpeg'
 import { X } from "lucide-react"; // Close Icon
 
 const images = [
@@ -11,6 +15,10 @@ const images = [
   { src: model2k24, title: "Model Presentation 2024", desc: "Students exhibited their cutting-edge scientific models." },
   { src: prize2k24_2, title: "Prize Distribution 2024", desc: "Winners received recognition for their innovative projects." },
   { src: quiz2k24, title: "Quiz 2024", desc: "A thrilling event with exceptional performances." },
+  { src: quiz2k24result, title: "Virtual Fair 2024 Result", desc: "List of Winners(2024)." },
+  { src: Judge1, title: "Judge of 2024 Virtual Science Fair", desc: "Dr. Abhishek Sen" },
+  { src: Judge2, title: "Judge of 2024 Virtual Science Fair", desc: "Dr. Sourabh Bal" },
+  { src: SocialMedia, title: "Virtual Fair 2024 Social Media Select", desc: "" },
 
 ];
 
