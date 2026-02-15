@@ -62,6 +62,7 @@ import MM9 from './assets/components/mm9.jsx';
 import MM10 from './assets/components/mm10.jsx';
 import MM11 from './assets/components/mm11.jsx';
 import MM12 from './assets/components/mm12.jsx';
+import Currentyear from './assets/components/currentyear.jsx';
 function App() {
   const [loading, setLoading] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(
@@ -101,6 +102,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/missionvission" element={<Misson />} />
         <Route path="/activities/science" element={<Model />} />
+        <Route path="/currentyear" element={<Currentyear />} />
+        <Route path="/about" element={<About />} />
         <Route path="/member" element={<Member />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<Adminlogin />} />
