@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 const CurrentYear = () => {
-  // ✅ ONLY reliable way without media queries
-  const isMobile = window.innerWidth <= 768;
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   const slides = [
     "/currentyearassests/slide1.jpeg",
@@ -29,67 +34,140 @@ const CurrentYear = () => {
         </p>
       </div>
 
-      {/* HERO SECTION */}
-      <section style={styles.hero}>
-        <div style={styles.heroSplit}>
+      {/* EVENT TEXT */}
+<section style={styles.infoSection}>
+  <p>
+    <strong>ScienceTech Academy</strong>, in association with{" "}
+    <strong>Swami Vivekananda Institute of Science & Technology</strong>,
+    proudly presents <strong>ScienceTech 2026</strong> — an exciting
+    Inter-School <strong>Science Exhibition</strong> &{" "}
+    <strong>Technical Debate</strong> designed to ignite curiosity,
+    creativity, and scientific temperament among young minds.
+  </p>
 
-          {/* Brochure */}
-          <div
-            style={{
-              ...styles.fullMedia,
-              backgroundImage: "url('/currentyearassests/2026bro.jpeg')"
-            }}
-          />
+  <p>
+    📅 <strong>Event Date:</strong> 18 April 2026 (Saturday)<br />
+    📍 <strong>Venue:</strong> SVIST Campus, Dakshin Gobindapur,
+    Sonarpur, Kolkata – 700145
+  </p>
 
-          {/* Video */}
-          <div style={styles.fullMedia}>
-            <video
-              style={styles.videoFill}
-              autoPlay
-              muted
-              loop
-              playsInline
-            >
-              <source
-                src="/currentyearassests/video2026.mp4"
-                type="video/mp4"
-              />
-            </video>
-          </div>
+  <p><strong>Participants are requested to carefully follow the registration process mentioned below:</strong></p>
 
-        </div>
-      </section>
+  <p>
+    🔬 <strong>SCIENCE EXHIBITION</strong><br />
+    Students may participate individually or as a team.<br />
+    <strong>Registration Details Required:</strong><br />
+    • Project Title<br />
+    • Team Member 1 (Name & Class)<br />
+    • Team Member 2 (Name & Class)<br />
+    • Team Member 3 (Optional)<br />
+    • Team Member 4 (Optional)<br />
+    <em>(Maximum 4 members per team)</em>
+  </p>
 
-      {/* GUIDELINES IMAGE */}
+  <p>
+    🎤 <strong>TECHNICAL DEBATE</strong><br />
+    Participants may register individually or in a team of two.<br />
+    <strong>Registration Details Required:</strong><br />
+    • Member 1 (Name & Class)<br />
+    • Member 2 (Optional)
+  </p>
+
+  <p>
+    📲 <strong>Submission of Registration Details</strong><br />
+    Kindly send the above details via WhatsApp to:<br />
+    📞 8335043379<br />
+    📞 6296842998
+  </p>
+
+  <p>
+    🏆 <strong>Attractive Cash Prizes</strong> | 🆓 <strong>Free Registration</strong><br />
+    👩‍🔬👨‍💻 Open for students of <strong>Classes VIII–XII</strong>
+  </p>
+
+  <p>
+    📞 <strong>WhatsApp / Call for Registration:</strong><br />
+    8335043379 | 6296842998 | 9851078629
+  </p>
+
+  <p>
+    🌐 <strong>Website:</strong> www.sciencetechacademy.in<br />
+    📧 <strong>Email:</strong> academysciencetech4@gmail.com
+  </p>
+
+  <p style={{ color: "#b91c1c", fontWeight: 600 }}>
+    Last Date of Registration: 01 April 2026
+  </p>
+
+  <p style={{ fontWeight: 600 }}>
+    Join us in celebrating innovation, knowledge, and the spirit of scientific excellence! 🚀
+  </p>
+</section>
+
+
+      {/* ROW 1 : VIDEO + INVITATION */}
       <section
         style={{
-          ...styles.fullImageSection,
-          height: isMobile ? "60vh" : "100vh",
+          ...styles.row,
+          flexDirection: isMobile ? "column" : "row"
+        }}
+      >
+        {/* VIDEO */}
+        <div
+          style={{
+            ...styles.mediaBlock,
+            width: isMobile ? "100%" : "50%",
+            height: isMobile ? "32vh" : "50vh"
+          }}
+        >
+          <video
+            style={styles.videoFill}
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/currentyearassests/video2026.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        {/* INVITATION */}
+        <div
+          style={{
+            ...styles.mediaBlock,
+            width: isMobile ? "100%" : "50%",
+            height: isMobile ? "38vh" : "50vh",
+            backgroundImage:
+              "url('/currentyearassests/Invitation_Letter.jpg')"
+          }}
+        />
+      </section>
+
+      {/* GUIDE IMAGE */}
+      <section
+        style={{
+          ...styles.singleImage,
+          height: isMobile ? "40vh" : "80vh",
           backgroundImage: "url('/currentyearassests/2026guide.jpeg')"
         }}
       />
 
-      {/* GALLERY */}
+      {/* SLIDESHOW */}
       <section
         style={{
-          ...styles.fullImageSection,
-          height: isMobile ? "60vh" : "100vh",
+          ...styles.singleImage,
+          height: isMobile ? "40vh" : "80vh",
           backgroundImage: `url(${slides[index]})`
         }}
       />
 
       {/* FOOTER */}
       <footer style={styles.footer}>
-        <p style={styles.footerText}>
-          For registration and academic queries
-        </p>
-
+        <p>For registration and academic queries</p>
         <a href="tel:+918335043379" style={styles.footerPhone}>
           +91-8335043379
         </a>
-
-        <span style={{ margin: "0 8px" }}>/</span>
-
+        <span> / </span>
         <a href="tel:+916296842998" style={styles.footerPhone}>
           +91-6296842998
         </a>
@@ -101,85 +179,68 @@ const CurrentYear = () => {
 
 const styles = {
   page: {
-    fontFamily: "'Segoe UI', Arial, sans-serif",
-    margin: 0
+    fontFamily: "'Segoe UI', Arial, sans-serif"
   },
 
-  /* HEADER */
   heroHeader: {
     textAlign: "center",
-    padding: "20px",
-    backgroundColor: "#ffffff"
+    padding: "20px"
   },
 
   heroTitle: {
     fontSize: "32px",
-    fontWeight: "600",
-    marginBottom: "6px",
     color: "#0f172a"
   },
 
   heroSubtitle: {
-    fontSize: "16px",
     color: "#475569"
   },
 
-  /* HERO */
-  hero: {
-    minHeight: "calc(100vh - 120px)",
-    display: "flex",
-    alignItems: "stretch",
-    overflow: "hidden"
+  infoSection: {
+    maxWidth: "1000px",
+    margin: "auto",
+    padding: "20px",
+    lineHeight: "1.7",
+    fontSize: "16px",
+    color: "#1f2937"
   },
 
-  heroSplit: {
+  row: {
     display: "flex",
-    width: "100%",
-    flexWrap: "wrap"
+    width: "100%"
   },
 
-  /* IMAGE / VIDEO BLOCK */
-  fullMedia: {
-    flex: "1 1 50%",
-    minWidth: "320px",        // desktop = 2 columns, mobile = stack
-    minHeight: "50vh",
+  mediaBlock: {
     backgroundSize: "contain",
-    backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    backgroundColor: "#000"
+    backgroundPosition: "center",
+    backgroundColor: "#ffffff"
   },
 
   videoFill: {
     width: "100%",
     height: "100%",
     objectFit: "contain",
-    backgroundColor: "#000"
+    backgroundColor: "#ffffff"
   },
 
-  /* FULL IMAGE SECTIONS */
-  fullImageSection: {
-    backgroundSize: "cover",
+  singleImage: {
+    backgroundSize: "contain",
+    backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
-    backgroundRepeat: "no-repeat"
+    backgroundColor: "#f8fafc"
   },
 
-  /* FOOTER */
   footer: {
     backgroundColor: "#0f172a",
-    color: "#ffffff",
-    padding: "40px 20px",
+    color: "#fff",
+    padding: "30px",
     textAlign: "center"
   },
 
-  footerText: {
-    marginBottom: "10px",
-    opacity: 0.9
-  },
-
   footerPhone: {
-    fontSize: "20px",
+    color: "#fff",
     fontWeight: "600",
-    color: "#ffffff",
     textDecoration: "none"
   }
 };

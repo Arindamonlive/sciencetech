@@ -5,9 +5,29 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import directorImage from "../images/somnathdas.png"; 
 // import slide1 from "../images/hs1.jpg";
-import slide2 from "../images/hs2.jpg";
-import slide3 from "../images/hs3.jpg";
-import slide4 from "../images/mock_test_series_2026.jpg";
+// import slide2 from "../images/hs2.jpg";
+// import slide3 from "../images/hs3.jpg";
+// import slide4 from "../images/mock_test_series_2026.jpg";
+import slide1 from "../images/heroslide1.jpeg";
+import slide2 from "../images/heroslide2.jpeg";
+import slide3 from "../images/heroslide3.jpeg";
+import slide4 from "../images/heroslide4.jpeg";
+import slide5 from "../images/heroslide5.jpeg";
+import slide6 from "../images/heroslide6.jpeg";
+import slide7 from "../images/heroslide7.jpeg";
+import slide8 from "../images/heroslide8.jpeg";
+import slide9 from "../images/heroslide9.jpeg";
+import slide10 from "../images/heroslide10.jpeg";
+import slide11 from "../images/heroslide11.jpeg";
+import slide12 from "../images/heroslide12.jpeg";
+import slide13 from "../images/heroslide13.jpeg";
+import slide14 from "../images/heroslide14.jpeg";
+import slide15 from "../images/heroslide15.jpeg";
+import slide16 from "../images/heroslide16.jpeg";
+import slide17 from "../images/heroslide17.jpeg";
+import slide18 from "../images/heroslide18.jpeg";
+import slide19 from "../images/heroslide19.jpeg";
+import slide20 from "../images/heroslide1.jpeg";
 const Home = () => {
   useEffect(() => {
     AOS.init({
@@ -22,9 +42,9 @@ const Home = () => {
       {/* Section 1: Full-Width Slideshow */}
       <section className="w-full h-full" data-aos="fade-up">
         <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
-          {/* <div>
+          <div>
             <img src={slide1} alt="Slide 1" className="w-full h-full object-cover" />
-          </div> */}
+          </div>
           <div>
             <img src={slide2} alt="Slide 2" className="w-full h-full object-cover" />
           </div>
@@ -33,6 +53,51 @@ const Home = () => {
           </div>
           <div>
             <img src={slide4} alt="Slide 4" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide5} alt="Slide 5" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide6} alt="Slide 6" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide7} alt="Slide 7" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide8} alt="Slide 8" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide9} alt="Slide 9" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide10} alt="Slide 10" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide11} alt="Slide 11" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide12} alt="Slide 12" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide13} alt="Slide 13" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide14} alt="Slide 14" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide15} alt="Slide 15" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide16} alt="Slide 16" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide17} alt="Slide 17" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide18} alt="Slide 18" className="w-full h-full object-cover" />
+          </div>
+                    <div>
+            <img src={slide19} alt="Slide 19" className="w-full h-full object-cover" />
           </div>
         </Carousel>
       </section>
