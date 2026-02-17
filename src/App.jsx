@@ -14,6 +14,7 @@ import Contact from "./assets/components/Contact.jsx";
 import Adminlogin from "./assets/components/Admin.jsx";
 import Member from "./assets/components/Member.jsx";
 import Advisory from './assets/components/Advisory.jsx';
+import Event2022 from './assets/components/Event2022.jsx';
 import Event2024 from './assets/components/Event2024.jsx';
 import Event2023 from './assets/components/Event2023.jsx';
 import Event2025 from './assets/components/Event2025.jsx';
@@ -111,7 +112,7 @@ function App() {
         <Route path="/event2024" element={<Event2024 />} />
         <Route path="/event2023" element={<Event2023 />} />
         <Route path="/event2025" element={<Event2025 />} />
-
+<Route path="/event2022" element={<Event2022 />} />
         {/* Exam Flow */}
         <Route path="/examlogin" element={<Login />} />
         <Route path="/subjects" element={<SubjectSelection />} />

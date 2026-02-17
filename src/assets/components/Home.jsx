@@ -27,7 +27,7 @@ import slide16 from "../images/heroslide16.jpeg";
 import slide17 from "../images/heroslide17.jpeg";
 import slide18 from "../images/heroslide18.jpeg";
 import slide19 from "../images/heroslide19.jpeg";
-import slide20 from "../images/heroslide1.jpeg";
+import announcment from "/currentyearassests/2026bro.jpeg";
 const Home = () => {
   useEffect(() => {
     AOS.init({
@@ -103,25 +103,88 @@ const Home = () => {
       </section>
 
       {/* Section 2: Deputy Registrar's Note */}
-      <section className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center gap-8">
-        {/* Image */}
-        <div className="flex-shrink-0" data-aos="zoom-in">
-          <img
-            src={directorImage}
-            alt="President"
-            className="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover shadow-lg"
-          />
-        </div>
+{/* Section 2: Deputy Registrar's Note */}
+<section className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-10">
+  
+  {/* LEFT: Secretary Message */}
+  <div className="flex flex-col md:flex-row items-center gap-8 md:w-2/3">
+    
+    {/* Image */}
+    <div className="flex-shrink-0" data-aos="zoom-in">
+      <img
+        src={directorImage}
+        alt="Secretary"
+        className="w-40 h-40 md:w-52 md:h-52 rounded-full object-cover shadow-lg"
+      />
+    </div>
 
-        {/* Text Content */}
-        <div className="flex-1 text-justify" data-aos="fade-left">
-          <h2 className="text-3xl font-bold text-blue-600">Secretary Message</h2>
-          <p className="mt-4 text-gray-700 leading-relaxed">
-            Welcome to ScienceTech Academy, where curiosity meets innovation! We empower high school students with cutting-edge science & technology education, hands-on experiments, and real-world applications. Join us on the journey of discovery.
-          </p>
-          <p className="mt-4 font-semibold text-gray-900">- Dr. Somnath Das, Secretary</p>
-        </div>
-      </section>
+    {/* Text Content */}
+    <div className="text-justify" data-aos="fade-left">
+      <h2 className="text-3xl font-bold text-blue-600">
+        Secretary’s Message
+      </h2>
+      <p className="mt-4 text-gray-700 leading-relaxed">
+        Welcome to ScienceTech Academy, where curiosity meets innovation! 
+        We empower high school students with cutting-edge science & technology education, 
+        hands-on experiments, and real-world applications.
+      </p>
+      <p className="mt-4 font-semibold text-gray-900">
+        – Dr. Somnath Das, Secretary
+      </p>
+    </div>
+  </div>
+
+  {/* RIGHT: ANNOUNCEMENTS */}
+  <div
+    className="md:w-1/3 bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg shadow-md"
+    data-aos="fade-up"
+  >
+    <h3 className="text-2xl font-bold text-blue-700 mb-4">
+      📢 Announcements
+    </h3>
+
+    <ul className="space-y-4 text-gray-700">
+<li>
+  <a
+    href={announcment}
+    download="ScienceTech_2026_Brochure.jpg"
+    className="flex items-start gap-2 cursor-pointer hover:text-blue-700 transition"
+  >
+    <span className="font-semibold text-red-600">🔴 New:</span>
+    <span className="underline">
+      ScienceTech 2026 registration is now open.
+    </span>
+  </a>
+</li>
+
+
+      <li>
+        📅 <strong>Event Date:</strong> 18 April 2026 (Saturday)
+      </li>
+
+      <li>
+        🏫 <strong>Venue:</strong> SVIST Campus, Sonarpur
+      </li>
+
+      <li>
+        🆓 <strong>Free Registration</strong> for all participants.
+      </li>
+
+      <li>
+        🏆 <strong>Attractive Cash Prizes</strong> for winners.
+      </li>
+
+      <li>
+        ⏰ <strong>Last Date:</strong>{" "}
+        <span className="text-red-700 font-semibold">
+          01 April 2026
+        </span>
+      </li>
+    </ul>
+  </div>
+
+</section>
+
 
       {/* Section 3: History of the Academy */}
       <section className="bg-gray-100 py-12" data-aos="fade-up">

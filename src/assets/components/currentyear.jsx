@@ -106,42 +106,34 @@ const CurrentYear = () => {
 
 
       {/* ROW 1 : VIDEO + INVITATION */}
-      <section
-        style={{
-          ...styles.row,
-          flexDirection: isMobile ? "column" : "row"
-        }}
-      >
-        {/* VIDEO */}
-        <div
-          style={{
-            ...styles.mediaBlock,
-            width: isMobile ? "100%" : "50%",
-            height: isMobile ? "32vh" : "50vh"
-          }}
-        >
-          <video
-            style={styles.videoFill}
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source src="/currentyearassests/video2026.mp4" type="video/mp4" />
-          </video>
-        </div>
+{/* VIDEO SECTION */}
+<section
+  style={{
+    ...styles.singleImage,
+    height: isMobile ? "32vh" : "50vh"
+  }}
+>
+  <video
+    style={styles.videoFill}
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source src="/currentyearassests/video2026.mp4" type="video/mp4" />
+  </video>
+</section>
 
-        {/* INVITATION */}
-        <div
-          style={{
-            ...styles.mediaBlock,
-            width: isMobile ? "100%" : "50%",
-            height: isMobile ? "38vh" : "50vh",
-            backgroundImage:
-              "url('/currentyearassests/Invitation_Letter.jpg')"
-          }}
-        />
-      </section>
+{/* INVITATION IMAGE SECTION */}
+<section
+  style={{
+    ...styles.singleImage,
+    height: isMobile ? "38vh" : "80vh",
+    backgroundImage:
+      "url('/currentyearassests/Invitation_Letter.jpg')"
+  }}
+/>
+
 
       {/* GUIDE IMAGE */}
       <section

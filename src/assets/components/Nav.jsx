@@ -77,6 +77,7 @@ const NavPage = () => {
     ACTIVITIES ▾
   </button>
   <div className={`w-full bg-gray-100 rounded-md overflow-hidden transition-all duration-300 ${dropdownOpen ? "max-h-96 p-2" : "max-h-0 p-0 hidden"}`}>
+    <Link to="/event2022" className="block px-3 py-2 text-center hover:bg-gray-300" onClick={() => setMenuOpen(false)}>2022</Link>
     <Link to="/event2023" className="block px-3 py-2 text-center hover:bg-gray-300" onClick={() => setMenuOpen(false)}>2023</Link>
     <Link to="/event2024" className="block px-3 py-2 text-center hover:bg-gray-300" onClick={() => setMenuOpen(false)}>2024</Link>
     <Link to="/event2025" className="block px-3 py-2 text-center hover:bg-gray-300" onClick={() => setMenuOpen(false)}>2025</Link>
@@ -108,6 +109,7 @@ const NavPage = () => {
           <div className="group relative">
             <button className="hover:text-blue-600">ACTIVITIES ▾</button>
             <div className="absolute left-0 hidden bg-white shadow-md rounded-md p-2 group-hover:block w-48">
+              <Link to="/event2022" className="block px-3 py-2 hover:bg-gray-100">2022</Link>
               <Link to="/event2023" className="block px-3 py-2 hover:bg-gray-100">2023</Link>
               <Link to="/event2024" className="block px-3 py-2 hover:bg-gray-100">2024</Link>
               <Link to="/event2025" className="block px-3 py-2 hover:bg-gray-100">2025</Link>
