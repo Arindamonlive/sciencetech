@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import { Carousel } from "react-responsive-carousel";
@@ -28,6 +28,7 @@ import slide17 from "../images/heroslide17.jpeg";
 import slide18 from "../images/heroslide18.jpeg";
 import slide19 from "../images/heroslide19.jpeg";
 import announcment from "/currentyearassests/2026bro.jpeg";
+import StatisticsSection from "../components/StatisticsSection";
 const Home = () => {
   useEffect(() => {
     AOS.init({
@@ -36,72 +37,270 @@ const Home = () => {
       easing: "ease-in-out",
     });
   }, []);
+  const [isCompact, setIsCompact] = useState(window.innerWidth < 1425);
+
+useEffect(() => {
+  const handleResize = () => {
+    setIsCompact(window.innerWidth < 1425);
+  };
+
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
   return (
     <div>
       {/* Section 1: Full-Width Slideshow */}
-      <section className="w-full h-full" data-aos="fade-up">
-        <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
+<section
+  className="
+    w-full
+    h-[42vh]
+    min-[1425px]:h-[75vh]
+    overflow-hidden
+  "
+>
+        <Carousel
+  autoPlay
+  infiniteLoop
+  showThumbs={false}
+  showStatus={false}
+  showArrows={!isCompact}   // hide arrows below 1425px
+  swipeable
+  emulateTouch
+  interval={4500}
+  stopOnHover={false}
+>
           <div>
-            <img src={slide1} alt="Slide 1" className="w-full h-full object-cover" />
+            <img
+  src={slide1}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
           <div>
-            <img src={slide2} alt="Slide 2" className="w-full h-full object-cover" />
+            <img
+  src={slide2}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
           <div>
-            <img src={slide3} alt="Slide 3" className="w-full h-full object-cover" />
+            <img
+  src={slide3}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
           <div>
-            <img src={slide4} alt="Slide 4" className="w-full h-full object-cover" />
+            <img
+  src={slide4}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide5} alt="Slide 5" className="w-full h-full object-cover" />
+            <img
+  src={slide5}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide6} alt="Slide 6" className="w-full h-full object-cover" />
+            <img
+  src={slide6}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide7} alt="Slide 7" className="w-full h-full object-cover" />
+            <img
+  src={slide7}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide8} alt="Slide 8" className="w-full h-full object-cover" />
+            <img
+  src={slide8}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide9} alt="Slide 9" className="w-full h-full object-cover" />
+           <img
+  src={slide9}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide10} alt="Slide 10" className="w-full h-full object-cover" />
+            <img
+  src={slide10}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide11} alt="Slide 11" className="w-full h-full object-cover" />
+            <img
+  src={slide11}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide12} alt="Slide 12" className="w-full h-full object-cover" />
+            <img
+  src={slide12}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide13} alt="Slide 13" className="w-full h-full object-cover" />
+            <img
+  src={slide13}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide14} alt="Slide 14" className="w-full h-full object-cover" />
+            <img
+  src={slide14}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide15} alt="Slide 15" className="w-full h-full object-cover" />
+            <img
+  src={slide15}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide16} alt="Slide 16" className="w-full h-full object-cover" />
+           <img
+  src={slide16}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide17} alt="Slide 17" className="w-full h-full object-cover" />
+            <img
+  src={slide17}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide18} alt="Slide 18" className="w-full h-full object-cover" />
+            <img
+  src={slide18}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
                     <div>
-            <img src={slide19} alt="Slide 19" className="w-full h-full object-cover" />
+            <img
+  src={slide19}
+  alt="Slide 1"
+  className="w-full h-full"
+  style={{
+    objectFit: isCompact ? "cover" : "contain",
+    objectPosition: "center",
+    backgroundColor: isCompact ? "transparent" : "#000",
+  }}
+/>
           </div>
         </Carousel>
       </section>
-
+<StatisticsSection />
       {/* Section 2: Deputy Registrar's Note */}
 {/* Section 2: Deputy Registrar's Note */}
 <section className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-10">

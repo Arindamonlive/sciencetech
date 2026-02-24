@@ -82,7 +82,7 @@ const AboutUs = () => {
     },
     {
       name: "Mr. Arpan Doloi",
-      role: "Relationship Manager",
+      role: "Executive Officer",
       image: Arpan,
     },
   ];
