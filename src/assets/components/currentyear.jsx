@@ -11,7 +11,8 @@ const CurrentYear = () => {
 
   const slides = [
     "/currentyearassests/slide1.jpeg",
-    "/currentyearassests/slide2.jpeg"
+    "/currentyearassests/slide2.jpeg",
+    "/currentyearassests/guest1.jpeg",
   ];
 
   const [index, setIndex] = useState(0);
@@ -102,6 +103,38 @@ const CurrentYear = () => {
   <p style={{ fontWeight: 600 }}>
     Join us in celebrating innovation, knowledge, and the spirit of scientific excellence! 🚀
   </p>
+</section>
+{/* GUEST SECTION */}
+<section style={styles.guestSection}>
+  {/* LEFT TEXT */}
+  <div style={styles.guestText}>
+    <h2>Chief Guest</h2>
+    <p>
+      We are honored to welcome our esteemed guest for ScienceTech 2026.
+      His contribution to science and technology has been remarkable and
+      continues to inspire young innovators across the country.
+    </p>
+
+    <p>
+      He will be sharing valuable insights and encouraging students to
+      explore innovation, research, and real-world problem solving.
+    </p>
+  </div>
+
+  {/* RIGHT IMAGE + DETAILS */}
+  <div style={styles.guestCard}>
+    <img
+      src="/currentyearassests/guest1.jpeg"
+      alt="Guest"
+      style={styles.guestImage}
+    />
+
+    <h3 style={{ margin: "10px 0 5px" }}>Prof. (Dr.) Chiranjib Bhattacharjee</h3>
+    <p style={{ margin: 0, color: "#475569" }}>
+       
+Vice Chancellor, Jadavpur University
+    </p>
+  </div>
 </section>
 
 
@@ -231,10 +264,47 @@ const styles = {
   },
 
   footerPhone: {
-    color: "#fff",
-    fontWeight: "600",
-    textDecoration: "none"
-  }
+  color: "#fff",
+  fontWeight: "600",
+  textDecoration: "none"
+},   // ✅ IMPORTANT
+
+guestSection: {
+  display: "flex",
+  flexWrap: "wrap",
+  alignItems: "center",   // ✅ vertical center
+  justifyContent: "space-between", // ✅ push left & right properly
+  padding: "40px 20px",
+  maxWidth: "1100px",
+  margin: "auto",
+  gap: "30px"
+},
+
+guestText: {
+  flex: "1",
+  minWidth: "300px",
+  fontSize: "16px",
+  lineHeight: "1.7",
+  color: "#1f2937"
+},
+
+guestCard: {
+  flex: "0 0 300px",   // ✅ fixed width keeps it aligned nicely
+  textAlign: "center",
+  background: "#ffffff",
+  padding: "20px",
+  borderRadius: "10px",
+  boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
+  margin: "auto"       // ✅ ensures vertical balance
+},
+
+guestImage: {
+  width: "180px",
+  height: "180px",
+  borderRadius: "50%",
+  objectFit: "cover",
+  border: "4px solid #e2e8f0"
+}
 };
 
 export default CurrentYear;
