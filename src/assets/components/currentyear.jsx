@@ -13,6 +13,9 @@ const CurrentYear = () => {
     "/currentyearassests/slide1.jpeg",
     "/currentyearassests/slide2.jpeg",
     "/currentyearassests/guest1.jpeg",
+    "/currentyearassests/guest2.jpeg",
+    "/currentyearassests/guest3.jpeg",
+    "/currentyearassests/guest4.jpeg",
   ];
 
   const [index, setIndex] = useState(0);
@@ -122,7 +125,7 @@ const CurrentYear = () => {
   </div>
 
   {/* RIGHT IMAGE + DETAILS */}
-  <div style={styles.guestCard}>
+  {/* <div style={styles.guestCard}>
     <img
       src="/currentyearassests/guest1.jpeg"
       alt="Guest"
@@ -134,7 +137,61 @@ const CurrentYear = () => {
        
 Vice Chancellor, Jadavpur University
     </p>
-  </div>
+  </div> */}
+
+  {/* RIGHT MULTIPLE GUESTS */}
+<div style={styles.guestGrid}>
+  {[
+    {
+      img: "/currentyearassests/guest1.jpeg",
+      name: "Prof. (Dr.) Chiranjib Bhattacharjee",
+      role: "Vice Chancellor, Jadavpur University",
+       highlight: true
+    },
+    {
+      img: "/currentyearassests/guest2.jpeg",
+      name: "Mr. Tapas Kumar Maity",
+      role: "Headmaster,Kharagpur Traffic High School (H.S.)",
+       highlight: true
+    },
+    {
+      img: "/currentyearassests/guest3.jpeg",
+      name: "Prof (Dr.) Tanmoy Dasgupta",
+      role: " Professor, The University of Burdwan",
+       highlight: true 
+    },
+    {
+      img: "/currentyearassests/guest4.jpeg",
+      name: "Mr. Amiya Kumar Kalidaha",
+      role: "Former Senior Scientist Department of Science & Technology and Biotechnology, Govt. of West Bengal (DSTBT-GoWB)",
+       highlight: true
+    }
+  ].map((g, i) => (
+<div
+  key={i}
+  style={{
+    ...styles.guestCard,
+    border: g.highlight ? "2px solid #2563eb" : "none"
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "translateY(-8px)";
+    e.currentTarget.style.boxShadow = "0 15px 35px rgba(0,0,0,0.15)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "translateY(0)";
+    e.currentTarget.style.boxShadow = "0 10px 25px rgba(0,0,0,0.08)";
+  }}
+>
+      <img src={g.img} alt="guest" style={styles.guestImage} />
+      <h3 style={{ margin: "10px 0 5px", fontSize: "14px" }}>
+        {g.name}
+      </h3>
+      <p style={{ margin: 0, color: "#475569", fontSize: "13px" }}>
+        {g.role}
+      </p>
+    </div>
+  ))}
+</div>
 </section>
 
 
@@ -272,39 +329,48 @@ const styles = {
 guestSection: {
   display: "flex",
   flexWrap: "wrap",
-  alignItems: "center",   // ✅ vertical center
-  justifyContent: "space-between", // ✅ push left & right properly
-  padding: "40px 20px",
-  maxWidth: "1100px",
+  alignItems: "center",
+  justifyContent: "space-between",
+  padding: "60px 20px",
+  maxWidth: "1200px",
   margin: "auto",
-  gap: "30px"
+  gap: "40px"
 },
 
 guestText: {
   flex: "1",
   minWidth: "300px",
   fontSize: "16px",
-  lineHeight: "1.7",
+  lineHeight: "1.8",
   color: "#1f2937"
 },
 
+guestGrid: {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+  gap: "25px",
+  flex: "1"
+},
+
 guestCard: {
-  flex: "0 0 300px",   // ✅ fixed width keeps it aligned nicely
-  textAlign: "center",
+  textAlign: "left",   // ✅ CHANGE THIS
   background: "#ffffff",
   padding: "20px",
-  borderRadius: "10px",
-  boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
-  margin: "auto"       // ✅ ensures vertical balance
+  borderRadius: "16px",
+  boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
+  transition: "all 0.3s ease",
+  cursor: "pointer"
 },
 
 guestImage: {
-  width: "180px",
-  height: "180px",
+  width: "130px",
+  height: "130px",
   borderRadius: "50%",
   objectFit: "cover",
-  border: "4px solid #e2e8f0"
-}
+  border: "4px solid #e2e8f0",
+  display: "block",
+  margin: "0 auto 10px auto"   // ✅ center image only
+},
 };
 
 export default CurrentYear;
