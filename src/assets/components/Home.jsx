@@ -29,6 +29,7 @@ import slide18 from "../images/heroslide18.jpeg";
 import slide19 from "../images/heroslide19.jpeg";
 import announcment from "/currentyearassests/2026bro.jpeg";
 import StatisticsSection from "../components/StatisticsSection";
+import HeroSection from "../components/HeroSection";
 const Home = () => {
   useEffect(() => {
     AOS.init({
@@ -51,7 +52,7 @@ useEffect(() => {
   return (
     <div>
       {/* Section 1: Full-Width Slideshow */}
-<section
+{/* <section
   className="
     w-full
     h-[42vh]
@@ -299,7 +300,13 @@ useEffect(() => {
 />
           </div>
         </Carousel>
-      </section>
+      </section> */}
+
+      <HeroSection
+  title="ScienceTech"
+  subtitle="Science Exhibition & Technical Debate"
+  yearEnd={2026}
+/>
 <StatisticsSection />
       {/* Section 2: Deputy Registrar's Note */}
 {/* Section 2: Deputy Registrar's Note */}
