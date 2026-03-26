@@ -268,10 +268,10 @@ onMouseLeave={(e) => {
 }}
   >
     <div style={styles.logoBox}>
-      <img src="/currentyearassests/sponsor1.png" alt="Event360" style={styles.logoImg} />
+      <img src="/currentyearassests/sponsor1.jpeg" alt="Event360" style={styles.logoImg} />
     </div>
     <p style={styles.logoTitle}>In Collaboration With</p>
-    <p style={styles.logoName}>Event 360 Solutions</p>
+    <p style={styles.logoName}>Event 360</p>
   </a>
 
 </div>
