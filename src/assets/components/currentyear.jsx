@@ -254,7 +254,7 @@ onMouseLeave={(e) => {
 
   {/* EVENT 360 */}
   <a
-    href="https://event360.co.in/"
+    href="https://www.facebook.com/share/1DYQca9QzH/"
     target="_blank"
     rel="noreferrer"
     style={styles.logoCard}
