@@ -16,7 +16,7 @@ const CurrentYear = () => {
     "/currentyearassests/slide4.jpeg",
     "/currentyearassests/slide5.jpeg",
   ];
-  const [year, setYear] = useState(2021);
+  const [year, setYear] = useState(2022);
 
 useEffect(() => {
   let current = 2021;

@@ -77,7 +77,7 @@ const DotBackground = () => {
 
 const HeroSection = ({ title = "ScienceTech", subtitle, yearEnd = 2026 }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const [year, setYear] = useState(2021);
+  const [year, setYear] = useState(2022);
 
   useEffect(() => {
     const onResize = () => setIsMobile(window.innerWidth <= 768);
