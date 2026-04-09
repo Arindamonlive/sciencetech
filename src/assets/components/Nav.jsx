@@ -63,7 +63,7 @@ const NavPage = () => {
         </button>
         <nav className="md:hidden flex flex-col gap-4 text-lg font-semibold w-full text-center">
           <Link to="/" className="hover:text-blue-600 py-2" onClick={() => setMenuOpen(false)}>HOME</Link>
-          <Link to="/about" className="hover:text-blue-600 py-2" onClick={() => setMenuOpen(false)}>ABOUT US</Link>
+          {/* <Link to="/about" className="hover:text-blue-600 py-2" onClick={() => setMenuOpen(false)}>ABOUT US</Link> */}
           <Link to="/advisory" className="hover:text-blue-600 py-2" onClick={() => setMenuOpen(false)}>ADVISORY COMMITTEE</Link>
           <Link to="/missionvission" className="hover:text-blue-600 py-2" onClick={() => setMenuOpen(false)}>MISSION & VISION</Link>
           <Link to="/currentyear" className="hover:text-blue-600 py-2" onClick={() => setMenuOpen(false)}>ScienceTech2026</Link>
@@ -100,7 +100,7 @@ const NavPage = () => {
         {/* Right: Menu Options */}
         <nav className="flex flex-wrap gap-8 text-lg font-semibold">
           <Link to="/" className="hover:text-blue-600">HOME</Link>
-          <Link to="/about" className="hover:text-blue-600">ABOUT US</Link>
+          {/* <Link to="/about" className="hover:text-blue-600">ABOUT US</Link> */}
           <Link to="/advisory" className="hover:text-blue-600">ADVISORY COMMITTEE</Link>
           <Link to="/missionvission" className="hover:text-blue-600">MISSION & VISION</Link>
           <Link to="/currentyear" className="hover:text-blue-600" >ScienceTech2026</Link>
